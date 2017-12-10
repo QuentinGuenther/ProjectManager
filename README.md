@@ -18,7 +18,23 @@ Currently this project is not officially hosted and is in a incomplete state.
 ``npm install``
 3. Start the server
 ``node .``
+3.5. Open a new console window 
+4. Move to ``client_src``
+``cd client_src``
+5. Start the client
+``npm start``
 
 ## Contributers
 * **Quentin Guenther** (Project Lead)
 
+## How To Contribute
+
+### Main technologies
+* NodeJS
+* LoopBack
+* React
+* React Router
+* React Router Dom
+* MongoDB 
+
+With a working knowlege of these technologies you can, make a [fork](https://help.github.com/articles/fork-a-repo/), add a new featcher or fix a bug, then make a [pull request](https://help.github.com/articles/about-pull-requests/).
