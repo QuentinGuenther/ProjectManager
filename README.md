@@ -1,4 +1,4 @@
-# Project Manaer
+# Project Manager
 
 This project is based off of [Trello](https://trello.com/).
 Each user as access to their list of projects and each project has "boards" of features. Each feature has a ``TODO`` list and notes associated with it.
@@ -12,17 +12,18 @@ Currently this project is not officially hosted and is in a incomplete state.
 * Node.js
 * MongoDB
 
-1. Clone the repository
-``git clone https://github.com/QuentinGuenther/ProjectManager.git``
-2. Run npm install
-``npm install``
-3. Start the server
-``node .``
-3.5. Open a new console window 
-4. Move to ``client_src``
-``cd client_src``
-5. Start the client
-``npm start``
+1. Set Up Node Server
+	1. Clone the repository
+	``git clone https://github.com/QuentinGuenther/ProjectManager.git``
+	2. Run npm install
+	``npm install``
+	3. Start the server
+	``node .``
+2. Set up Client (in a new console window)
+	1. Move to ``client_src``
+	``cd client_src``
+	2. Start the client
+	``npm start``
 
 ## Contributers
 * **Quentin Guenther** (Project Lead)
@@ -37,4 +38,4 @@ Currently this project is not officially hosted and is in a incomplete state.
 * React Router Dom
 * MongoDB 
 
-With a working knowlege of these technologies you can, make a [fork](https://help.github.com/articles/fork-a-repo/), add a new featcher or fix a bug, then make a [pull request](https://help.github.com/articles/about-pull-requests/).
+With a working knowlege of these technologies you can, make a [fork](https://help.github.com/articles/fork-a-repo/), add a new feature or fix a bug, then make a [pull request](https://help.github.com/articles/about-pull-requests/).
