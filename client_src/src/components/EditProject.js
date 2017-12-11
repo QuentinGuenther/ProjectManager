@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
+/**
+ * Edit Project page
+ *
+ * @author Quentin Guenther
+ */
 class EditProject extends Component {
+	/**
+	 * Initialize EditProject componant
+	 *
+	 * @param props 
+	 */
 	constructor(props) {
 		super(props);
 
@@ -12,15 +22,25 @@ class EditProject extends Component {
 			description: ''
 		}
 
-		this.handleInputChange = this.handleInputChange.bind(this);
+		this.handleInputChange = this.handleInputChange.bind(this); // bind inputChange for all fields
 	}
 
+	/**
+	 * Get the project details when componant is mounted
+	 * 
+	 * @see {@link getProjectDetails} 
+	 */
 	componentWillMount() {
 		this.getProjectDetails();
 	}
 
+	/**
+	 * Initialize EditProject componant
+	 *
+	 * @param props 
+	 */
 	getProjectDetails() {
-		let projectID = this.props.match.params.id;
+		let projectID = this.props.match.params.id; // get id from url
 
 		Axios.get(`http://localhost:3000/api/Projects/${projectID}`)
 			.then(response => {
@@ -32,16 +52,27 @@ class EditProject extends Component {
 			});
 	}
 
+	/**
+	 * This method makes a put request to the server to change the project
+	 *
+	 * @param newProject A project object 
+	 */
 	editProject(newProject) {
 		Axios.request({
 			method: 'put',
 			url: `http://localhost:3000/api/Projects/${this.state.id}`,
 			data: newProject
 		}).then(response => {
-			this.props.history.push('/');
+			this.props.history.push('/'); // Redirect to homepage
 		});
 	}
-
+	
+	/**
+	 * This method creates a new project object
+	 *
+	 * @see {@link editProject}
+	 * @param e Event listener
+	 */
 	onSubmit(e) {
 		const newProject = {
 			name: this.refs.name.value,
@@ -61,6 +92,11 @@ class EditProject extends Component {
 		});
 	}
 
+	/**
+	 * Render the Edit Project component
+	 *
+	 * @returns Edit Project component
+	 */
 	render() {
 		return (
 			<div>

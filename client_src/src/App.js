@@ -4,6 +4,11 @@ import './App.css';
 import Main from './components/Main';
 import Navbar from './components/Navbar';
 
+/**
+ * Template of webpages
+ * 
+ * @author Quentin Guenther
+ */
 const App = () => (
   <div>
     <Navbar />

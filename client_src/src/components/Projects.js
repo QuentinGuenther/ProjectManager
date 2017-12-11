@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import ProjectItem from './ProjectItem';
 
+/**
+ * Projects homepage
+ *
+ * @author Quentin Guenther
+ */
 class Projects extends Component {
+	/**
+	 * Initialize Projects componant
+	 *
+	 * @param props 
+	 */
 	constructor() {
 		super();
 
@@ -11,10 +21,18 @@ class Projects extends Component {
 		}
 	}
 
+	/**
+	 * Get the projects when componant is mounted
+	 * 
+	 * @see {@link getProjectDetails} 
+	 */
 	componentWillMount() {
 		this.getProjects();
 	}
 
+	/**
+	 * Get the projects from the server
+	 */
 	getProjects() {
 		Axios.get('http://localhost:3000/api/Projects')
 			.then(response => {
@@ -24,6 +42,11 @@ class Projects extends Component {
 			});
 	}
 
+	/**
+	 * Render the Projects component
+	 *
+	 * @returns Projects component
+	 */
 	render() {
 		const projectItems = this.state.projects.map((project, i) => {
 			return (

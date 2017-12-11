@@ -6,6 +6,11 @@ import ProjectDetails from './ProjectDetails';
 import AddProject from './AddProject';
 import EditProject from './EditProject';
 
+/**
+ * Control the front-end routes
+ * 
+ * @author Quentin Guenther
+ */
 const Main = () => (
 	<main>
 		<Switch>

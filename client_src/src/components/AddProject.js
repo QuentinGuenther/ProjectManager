@@ -2,17 +2,33 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
+/**
+ * Add Project page
+ *
+ * @author Quentin Guenther
+ */
 class AddProject extends Component {
+	/**
+	 * This method makes a post request to the server to add the new project
+	 *
+	 * @param newProject A project object
+	 */
 	addProject(newProject) {
 		Axios.request({
 			method: 'post',
 			url: 'http://localhost:3000/api/Projects/',
 			data: newProject
 		}).then(response => {
-			this.props.history.push('/');
+			this.props.history.push('/'); // Redirect to homepage
 		});
 	}
 
+	/**
+	 * This method creates a new project object
+	 *
+	 * @see {@link addProject}
+	 * @param e Event listener
+	 */
 	onSubmit(e) {
 		const newProject = {
 			name: this.refs.name.value,
@@ -22,6 +38,11 @@ class AddProject extends Component {
 		e.preventDefault();
 	}
 
+	/**
+	 * Render the Add Project component
+	 *
+	 * @returns Add Project component
+	 */
 	render() {
 		return (
 			<div>

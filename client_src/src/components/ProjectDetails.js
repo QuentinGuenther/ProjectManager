@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
+/**
+ * Project details page
+ *
+ * @author Quentin Guenther
+ */
 class ProjectDetails extends Component {
+	/**
+	 * Initialize ProjectDetails componant
+	 *
+	 * @param props 
+	 */
 	constructor(props) {
 		super(props);
 
@@ -11,10 +21,18 @@ class ProjectDetails extends Component {
 		}
 	}
 
+	/**
+	 * Get the project details when componant is mounted
+	 * 
+	 * @see {@link getProjectDetails} 
+	 */
 	componentWillMount() {
 		this.getProject();
 	}
 
+	/**
+	 * Get the details of the project from the server
+	 */
 	getProject() {
 		let projectID = this.props.match.params.id;
 
@@ -26,15 +44,23 @@ class ProjectDetails extends Component {
 			});
 	}
 
+	/**
+	 * Send delete request to server for project
+	 */
 	onDelete() {
 		let projectID = this.state.details.id;
 
 		Axios.delete(`http://localhost:3000/api/Projects/${projectID}`)
 			.then(response => {
-				this.props.history.push('/');
+				this.props.history.push('/'); // Redirect to homepage
 			});
 	}
 
+	/**
+	 * Initialize EditProject componant
+	 *
+	 * @param props 
+	 */
 	render() {
 		return (
 			<div>

@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Navbar component
+ *
+ * @author Quentin Guenther
+ */
 class Navbar extends Component {
+  /**
+   * Render the navbar component
+   *
+   * @returns navbar component
+   */
 	render() {
 		return (
 			<nav className="blue darken-3">
