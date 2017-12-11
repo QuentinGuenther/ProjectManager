@@ -21,8 +21,17 @@ class ProjectDetails extends Component {
 		Axios.get(`http://localhost:3000/api/Projects/${projectID}`)
 			.then(response => {
 				this.setState({details: response.data}, () => {
-					console.log(this.state);
+					//console.log(this.state);
 				});
+			});
+	}
+
+	onDelete() {
+		let projectID = this.state.details.id;
+
+		Axios.delete(`http://localhost:3000/api/Projects/${projectID}`)
+			.then(response => {
+				this.props.history.push('/');
 			});
 	}
 
@@ -31,8 +40,8 @@ class ProjectDetails extends Component {
 			<div>
 				<Link className="btn grey" to="/">Back</Link><br />
 				<h1>{this.state.details.name}</h1>
-				<Link className="btn" to={`projects/edit/${this.state.id}`}>Edit</Link>
-				<button className="btn red right">Delete</button>
+				<Link className="btn" to={`./edit/${this.state.details.id}`}>Edit</Link>
+				<button onClick={this.onDelete.bind(this)} className="btn red right">Delete</button>
 				<blockquote className="flow-text">{this.state.details.description}</blockquote>
 
 			</div>
