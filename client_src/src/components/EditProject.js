@@ -109,7 +109,7 @@ class EditProject extends Component {
 						<label htmlFor="name">Project Name</label>
 					</div>
 					<div className="input-field">
-						<textarea name="description" ref="description" className="materialize-textarea" value={this.state.description} onChange={this.handleInputChange} />
+						<input name="description" ref="description" value={this.state.description} onChange={this.handleInputChange} />
 						<label htmlFor="description">Project Description</label>
 					</div>
 					<input type="submit" value="Save" className="btn" />

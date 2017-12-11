@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import ProjectItem from './ProjectItem';
 
@@ -60,7 +61,13 @@ class Projects extends Component {
 				<ul className="collection">
 					{projectItems}
 				</ul>
+				<div className="fixed-action-btn">
+	      			<Link to="/projects/add" className="btn-floating btn-large red">
+	        			<i className="fa fa-plus"></i>
+	      			</Link>
+    			</div>
 			</div>
+			
 		);
 	}
 }
