@@ -47,7 +47,7 @@ class AddProject extends Component {
 		return (
 			<div>
 				<Link className="btn grey" to="/">Back</Link><br />
-				<h1>Add Project</h1>
+				<h1 className="teal-text text-lighten-1 center">Add Project</h1>
 
 				<form onSubmit={this.onSubmit.bind(this)}>
 					<div className="input-field">
@@ -55,7 +55,7 @@ class AddProject extends Component {
 						<label htmlFor="name">Project Name</label>
 					</div>
 					<div className="input-field">
-						<textarea name="description" ref="description" className="materialize-textarea" />
+						<input type="text" name="description" ref="description" />
 						<label htmlFor="description">Project Description</label>
 					</div>
 					<input type="submit" value="Save" className="btn" />

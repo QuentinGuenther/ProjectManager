@@ -14,14 +14,14 @@ class Navbar extends Component {
    */
 	render() {
 		return (
-			<nav className="blue darken-3">
+			<nav className="light-green darken-3">
     			<div className="nav-wrapper">
-      				<a href="/" className="brand-logo">ProjectManager</a>
-      				<a data-activates="main-menu" className="button-collapse show-on-large"><i className="fa fa-bars"></i></a>
+      				<a href="/" className="brand-logo center white-text flow-text"><b>ProjectManager</b></a>
+      				<a data-activates="main-menu" className="button-collapse show-on-large"><b><i className="fa fa-bars white-text"></i></b></a>
       				<ul className="right hide-on-small-only">
-        				<li><Link to="/"><i className="fa fa-code-fork"></i> Projects</Link></li>
+        				<li><Link to="/" className="white-text"><i className="fa fa-code-fork"></i> <b>Projects</b></Link></li>
       				</ul>
-      				<ul className="side-nav" id="main-menu">
+      				<ul className="side-nav grey lighten-2" id="main-menu">
       					<li><Link to="/"><i className="fa fa-code-fork"></i> Projects</Link></li>
       					<li><Link to="/projects/add"><i className="fa fa-plus"></i> Add Project</Link></li>
                 <li><Link to="/about"><i className="fa fa-question-circle"></i> About</Link></li>

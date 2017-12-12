@@ -101,16 +101,16 @@ class EditProject extends Component {
 		return (
 			<div>
 				<Link className="btn grey" to="/">Back</Link><br />
-				<h1>Edit Project</h1>
+				<h1 className="teal-text text-lighten-1 center">Edit Project</h1>
 
 				<form onSubmit={this.onSubmit.bind(this)}>
 					<div className="input-field">
 						<input type="text" name="name" ref="name" value={this.state.name} onChange={this.handleInputChange} />
-						<label htmlFor="name">Project Name</label>
+						<label htmlFor="name"  className="active">Project Name</label>
 					</div>
 					<div className="input-field">
-						<input name="description" ref="description" value={this.state.description} onChange={this.handleInputChange} />
-						<label htmlFor="description">Project Description</label>
+						<input type="text" name="description" ref="description" value={this.state.description} onChange={this.handleInputChange} />
+						<label htmlFor="description"  className="active">Project Description</label>
 					</div>
 					<input type="submit" value="Save" className="btn" />
 				</form>
