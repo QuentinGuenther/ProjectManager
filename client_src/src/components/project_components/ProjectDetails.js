@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
+import Feature from './feature_components/Feature';
 
 /**
  * Project details page
@@ -70,6 +71,7 @@ class ProjectDetails extends Component {
 				<button onClick={this.onDelete.bind(this)} className="btn red right">Delete</button>
 				<blockquote className="flow-text">{this.state.details.description}</blockquote>
 
+				<Feature key="5a30bfe65434a40b70ea3acf"/>
 			</div>
 		);
 	}
