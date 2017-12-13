@@ -29,7 +29,7 @@ class ProjectItem extends Component {
 		return (
 			<Link to={`/projects/${this.state.item.id}`}>
 				<li className="collection-item light-green darken-1 white-text z-depth-2 truncate">
-					<b>{this.state.item.name}<i className="fa fa-paper-plane left" aria-hidden="true"></i></b>
+					<b><i className="fa fa-paper-plane left" aria-hidden="true"></i>{this.state.item.name}</b>
 				</li>
 			</Link>
 		);

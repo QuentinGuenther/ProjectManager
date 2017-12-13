@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Projects from './Projects';
+import Projects from './project_components/Projects';
 import About from './About';
-import ProjectDetails from './ProjectDetails';
-import AddProject from './AddProject';
-import EditProject from './EditProject';
+import ProjectDetails from './project_components/ProjectDetails';
+import AddProject from './project_components/AddProject';
+import EditProject from './project_components/EditProject';
 
 /**
  * Control the front-end routes

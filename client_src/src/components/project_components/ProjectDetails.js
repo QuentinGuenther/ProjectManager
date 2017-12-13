@@ -65,7 +65,7 @@ class ProjectDetails extends Component {
 		return (
 			<div>
 				<Link className="btn grey" to="/">Back</Link><br />
-				<h1 className="teal-text text-lighten-1">{this.state.details.name}</h1>
+				<h1 className="teal-text text-lighten-1 truncate">{this.state.details.name}</h1>
 				<Link className="btn" to={`./edit/${this.state.details.id}`}>Edit</Link>
 				<button onClick={this.onDelete.bind(this)} className="btn red right">Delete</button>
 				<blockquote className="flow-text">{this.state.details.description}</blockquote>

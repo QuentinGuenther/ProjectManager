@@ -66,7 +66,7 @@ class Projects extends Component {
 		return (
 			<div>
 				<div className="row">
-					<div className="col s12 l6">
+					<div className="col s12 l6 offset-l3">
 						<h1 className="teal-text text-lighten-1 center">Projects</h1>
 
 						{this.state.projects.length === 0 ? 
