@@ -28,15 +28,29 @@ class Feature extends Component {
 	render() {
 		let todoItems = []; 
 		for(let i in this.state.details.todo){
-			todoItems.push(<li key={this.state.details.todo[i].name}>{this.state.details.todo[i].name}</li>);
+			todoItems.push(
+				<p key={this.state.details.todo[i].name}>
+					<input 
+						type="checkbox" 
+						className="filled-in" 
+						name={this.state.details.todo[i].name} 
+						id={this.state.details.todo[i].name} />
+					<label htmlFor={this.state.details.todo[i].name}>{this.state.details.todo[i].name}</label>
+				</p>);
 		}
 		return(
 			<div>
-				<h5>{this.state.details.name}</h5>
-				<p>{this.state.details.userStory}</p>
-				<ul>
-					{todoItems}
-				</ul>
+				<div className="card">
+					<div className="card-content">
+						<span className="card-title">{this.state.details.name}</span>
+						<p>{this.state.details.userStory}</p>
+						<div className="card-action">
+							<form>
+								{todoItems}
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}
